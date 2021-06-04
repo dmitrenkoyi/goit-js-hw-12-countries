@@ -6,6 +6,7 @@ import countryCardTemplate from './template/country-card.hbs';
 import { error } from '@pnotify/core';
 import '@pnotify/core/dist/BrightTheme.css';
 
+
 const refs = {
     input: document.querySelector('.input-js'),
     cardCountries: document.querySelector('.card-countries-container'),
@@ -74,3 +75,4 @@ function onFetchError(err) {
         delay: 2000,
     });
 };
+
