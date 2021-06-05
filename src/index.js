@@ -18,10 +18,10 @@ function OnInputGetId(e) {
     clearContainer();
     let inputValue = e.target.value.trim();
 
-    if (refs.input.length < 1) return;
+    // if (refs.input.length < 1) return;
+    if (inputValue === '') return;
 
     fetchCountry(inputValue).then(countries => {
-
         if (countries.length > 10) {
             error({
                 text: 'Too many matches found. Please enter a more specific query!',
@@ -34,7 +34,6 @@ function OnInputGetId(e) {
             });
             return;
         }
-
         if (countries.length >= 2 && countries.length <= 10) {
             renderCountryList(countries);
         }
